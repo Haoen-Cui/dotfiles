@@ -4,6 +4,13 @@ One may have multiple `git` accounts, e.g. for work and open source projects. He
 
 Here is my workflow using SSH authentication and a few shell commands which allows me to switch between `git` accounts on different hosts. Below is a step-by-step setup walk through and the files in this directory shows an example. 
 
+Table of contents: 
+
+- `.zshrc`: bash / zsh profile to hold aliased shell commands 
+- `.ssh`: SSH settings on your machine 
+  - `config`: let SSH know your corresponding private key for each domain (e.g. work vs open source) 
+  - `id_rsa_*` and `id_rsa_*.pub`: private and public key pair 
+
 ## Step 1: Setup an SSH key for Each `git` Account 
 
 Reference: [Connecting to GitHub with SSH](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh)
@@ -45,7 +52,7 @@ Host git.<YOUR_COMPANY>.com
 
 ## Step 3: Alias a Shell Command 
 
-Put the following in your bash profile (`.bash_profile` or `.zshrc`). Create one alias for each usage you need. 
+Put the following in your bash / zsh profile (`.bash_profile` or `.zshrc`). Create one alias for each usage you need. 
 
 ```bash
 alias git_<USAGE>='git config --global user.name "<YOUR_GIT_USERNAME>" && git config --global user.email "<YOUR_EMAIL_FOR_GIT@example.com>"'
