@@ -11,6 +11,8 @@ Table of contents:
   - `config`: let SSH know your corresponding private key for each domain (e.g. work vs open source) 
   - `id_rsa_*` and `id_rsa_*.pub`: private and public key pair 
 
+Before we dive into the setup steps, I would also like to mention that [@terrytangyuan](https://github.com/terrytangyuan/) kindly pointed out [another elegant solution](https://github.com/terrytangyuan/dotfiles/blob/master/git/.gitconfig#L58-L74) using `git` alias. As you can find in his `.gitconfig` file, its authentication utilizes cached password in `osxkeychain` as opposed to SSH (what we are going to show below). 
+
 ## Step 1: Setup an SSH key for Each `git` Account 
 
 Reference: [Connecting to GitHub with SSH](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh)
